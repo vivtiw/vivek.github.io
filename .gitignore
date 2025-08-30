@@ -1,0 +1,13 @@
+# Documentation files
+DEPLOYMENT.md
+WEBSITE_README.md
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
