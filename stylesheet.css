@@ -260,6 +260,39 @@ name {
   transform: translateX(5px);
 }
 
+.company-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.company-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+  background: white;
+}
+
+.company-header div {
+  flex-grow: 1;
+}
+
 .experience-item h3 {
   margin: 0 0 8px 0;
   color: #2c3e50;
@@ -271,12 +304,23 @@ name {
   color: #7f8c8d;
   font-size: 13px;
   font-style: italic;
-  margin: 0 0 10px 0;
+  margin: 0;
 }
 
 .experience-item p:last-child {
   margin: 0;
   color: #555;
+}
+
+@media (max-width: 480px) {
+  .company-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .company-logo {
+    margin-bottom: 15px;
+  }
 }
 
 /* Education Items */
